@@ -1,0 +1,1 @@
+select id,city,address,price,status from apartments where status = 'Not rented' and price > (select avg(price) from apartments) group by price,id,city,address,price,status;
